@@ -1,0 +1,10 @@
+GET localhost/kulinaapp/public/api
+POST localhost/kulinaapp/public/api
+PUT localhost/kulinaapp/public/api/3
+DELETE localhost/kulinaapp/public/api/3
+
+order_id int
+product_id int
+user_id int
+rating float
+review string

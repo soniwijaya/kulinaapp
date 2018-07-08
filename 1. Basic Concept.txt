@@ -1,0 +1,33 @@
+1 Coding
+    a. contoh code smell pada oop, salah satunya pengulangan ( repetion )
+        contoh codenya (Javascript)
+        untuk melakukan pengecekkan yg sama cukup buatkan satu function contoh pengecekkan kata
+        
+        function palindrome(kata){
+            var hasil = "";
+            for(var i=kata.length-1;i>=0;i--){
+                hasil += kata[i];
+            }
+            if(hasil==kata){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        console.log(palindrome('katak')); // true
+
+        jadi code lebih reusable dan tidak redundant(dry). 
+        usahakan selalu gunakan modular function agar code lebih clean, simple, dan rapi.
+
+     b. konsep Dependency Injection adalah teknik yg digunakan pada method oop untuk merampingkan classnya. 
+        jadi sebuah yg class dibuat bisa di pakai terus - menerus. contoh kasus sebuah pohon memproduksi buah-buahan.
+        pohon bisa memproduksi buah apel ,mangga, pear. maka hal pertama yg perlu dibuat adalah 1 class pohon dan 3 class buah.
+        jadi per buah dibuatkan masing-masing, agar jika terjadi kesalahan atau debugging lebih mudah.
+
+2. REST GET dan POST
+    GET 
+        yg seharusnya ketika dilakukan pada GET adalah GET data bisa dilakukan untuk mengambil banyak data dan single data, berikan authorization dan authetification jika data bersifat closed.
+        yg seharusnya tidak boleh dilakukan data returnnya tidak boleh format selain JSON
+    POST 
+        yg seharusnya dilakukan ketika POST adalah Jika bersifat open tidak perlu authetification dan authorization, jika close wajib. wajib berisi parameter data yg input.
+        yg seharusnya tidak boleh data POST saat diinput kosong wajib berisi validasi baik pada sisi ORM database, server maupun client
